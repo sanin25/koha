@@ -85,9 +85,21 @@ text-decoration: none;
   background: #b5c6d0;
 }
 .admenu{
-  margin: 10px;
   float: left;
+  width: 100%;
+  margin-bottom: 50px;
 }
 .adcenter{
-  float: left;
+    float: left;
+    font-family: serif;
+    width: 960px;
+    
+ }
+.status{
+  float: right;
+  background: #585;
+  width: 300px;
+  text-align: center;
+  padding: 9px;
+
 }
