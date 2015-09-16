@@ -16,9 +16,12 @@ body{
     margin:0 auto; 
       
 }*/
-.table{
-     margin: 0 auto;
+.wapper{
+      margin: 0 auto;
     width: 960px;
+}
+.table{
+    
      
 }
 .table label{
@@ -62,4 +65,29 @@ tbl{
     -moz-border-radius: 10px 10px 10px 10px;
     -webkit-border-radius: 10px 10px 10px 10px;
     border: 0px solid #000000;
+}
+.menuadmintop{
+    margin: 5px;
+}
+.menuadmintop li{
+  display: block;
+  float: left;
+  padding: 0 0 0 5px;
+}
+.menuadmintop li a{
+display: block;
+padding: 5px;
+background: #e0eff9;
+text-decoration: none;
+
+}
+.menuadmintop li a:hover{
+  background: #b5c6d0;
+}
+.admenu{
+  margin: 10px;
+  float: left;
+}
+.adcenter{
+  float: left;
 }

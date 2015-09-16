@@ -11,10 +11,10 @@
     <?= html::script($script)?>
     <?endforeach?>
     <?endif?> 
-    
+    <div class="wapper">
     <div class="admenu">
         
-        <ul>
+        <ul class="menuadmintop">
             <li><?=HTML::anchor('admin','На главную')?></li>
             <li><?=HTML::anchor('admin/pages','Страницы')?></li>
             
@@ -27,3 +27,4 @@
          <?endforeach?>
         <?endif?>
     </div>
+        </div>
