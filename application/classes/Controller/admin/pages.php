@@ -2,9 +2,10 @@
 
 class Controller_Admin_Pages extends Controller_Admin
 {      
+   
     public function action_index()
             {
-               
+        
                $allpage = ORM::factory('page')->find_all();
                $cotent = View::factory('admin/pages/a_allpage')->bind('allpage', $allpage);
                $this->template->center =  array($cotent); 
