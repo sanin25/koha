@@ -17,6 +17,7 @@
         <ul class="menuadmintop">
             <li><?=HTML::anchor('admin','На главную')?></li>
             <li><?=HTML::anchor('admin/pages','Страницы')?></li>
+            <li><?=HTML::anchor('logout','Выход')?></li>
             
         </ul>
     </div>

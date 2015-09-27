@@ -1,6 +1,4 @@
 <br/>
-
-
 <?=Form::open('login')?>
 <table width="300" cellspacing="5">
     <tr>
@@ -17,7 +15,7 @@
     </tr>
 
     <tr>
-        <td align="center"><?=Form::submit('submit', 'Войти')?></td>
+        <td align="center"><?=Form::submit('login', 'Войти')?></td>
         <td><?=Html::anchor('register', 'Регистрация')?></td>
     </tr>
 </table>
