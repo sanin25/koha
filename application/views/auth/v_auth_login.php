@@ -1,4 +1,9 @@
 <br/>
+<?if($errors):?>
+<?foreach ($errors as $error):?>
+<div class="error"><?=$error?></div>
+<?endforeach?>
+<?endif?>
 <?=Form::open('login')?>
 <table width="300" cellspacing="5">
     <tr>
@@ -16,7 +21,7 @@
 
     <tr>
         <td align="center"><?=Form::submit('login', 'Войти')?></td>
-        <td><?=Html::anchor('register', 'Регистрация')?></td>
+        <!--<td><?=Html::anchor('register', 'Регистрация')?></td>-->
     </tr>
 </table>
 <?=Form::close()?>

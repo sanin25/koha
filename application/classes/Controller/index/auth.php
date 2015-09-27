@@ -24,11 +24,13 @@ class Controller_Index_Auth extends Controller_Index{
                         $errors = array(Kohana::message('auth/user', 'no_user'));
                     }
                 }
-                $view = View::factory('auth/v_auth_login');
+                $view = View::factory('auth/v_auth_login')
+                        ->bind('errors', $errors);
                 $this->template->center = array($view);
                  $this->template->title = "Вход на сайт";
+                
             }
-            public function action_register()
+           /*public function action_register()
                     {
                 
                         if(isset($_POST['reg']))
@@ -58,7 +60,7 @@ class Controller_Index_Auth extends Controller_Index{
                         $view = View::factory('auth/v_auth_register');
                         $this->template->center = array($view);
                          $this->template->title = "регистрация на сайт";
-                    }
+                    }*/
                     
                     public function action_logout()
                             {

@@ -10,8 +10,8 @@ class Controller_Admin extends Controller_Main
                 HTTP::redirect('login');
         }
         parent::before();
-        $this->template->styles = array('/media/css/admin.css');
-        $this->template->scripts = array('/media/js/jquery.js','/media/js/MultiFile.pack.js','/media/js/upload.js');
+        $this->template->styles = array('/media/css/admin.css','media/css/jquery.fancybox.css');
+        $this->template->scripts = array('/media/js/jquery.js','/media/js/MultiFile.pack.js','/media/js/upload.js','/media/js/jquery.fancybox.pack.js','/media/js/demo.js');
         
     }
 } 

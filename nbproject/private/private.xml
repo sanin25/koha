@@ -3,11 +3,13 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/site/OpenServer/domains/koh.ru/application/messages/auth/user.php</file>
-            <file>file:/C:/site/OpenServer/domains/koh.ru/modules/orm/classes/Model/Auth/User.php</file>
-            <file>file:/C:/site/OpenServer/domains/koh.ru/application/classes/Controller/index/auth.php</file>
-            <file>file:/C:/site/OpenServer/domains/koh.ru/application/views/auth/v_auth_register.php</file>
-            <file>file:/C:/site/OpenServer/domains/koh.ru/application/classes/Model/user.php</file>
+            <file>file:/C:/site/OpenServer/domains/koh.ru/application/views/index/v_main.php</file>
+            <file>file:/C:/site/OpenServer/domains/koh.ru/application/views/admin/pages/a_page_edit.php</file>
+            <file>file:/C:/site/OpenServer/domains/koh.ru/application/views/index/v_page.php</file>
+            <file>file:/C:/site/OpenServer/domains/koh.ru/application/classes/Controller/index/page.php</file>
+            <file>file:/C:/site/OpenServer/domains/koh.ru/application/classes/Controller/admin.php</file>
+            <file>file:/C:/site/OpenServer/domains/koh.ru/application/classes/Controller/admin/pages.php</file>
+            <file>file:/C:/site/OpenServer/domains/koh.ru/application/classes/Controller/index.php</file>
         </group>
     </open-files>
 </project-private>

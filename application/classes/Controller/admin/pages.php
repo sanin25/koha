@@ -73,7 +73,8 @@ class Controller_Admin_Pages extends Controller_Admin
                   $cotent =  View::factory('admin/pages/a_page_edit')
                           ->bind('db', $db)
                           ->bind('cats',$cats)
-                          ->bind('id',$id);
+                          ->bind('id',$id)
+                           ->bind('data',$data);
                    $this->template->center =  array($cotent);
                    if(isset($_POST['edit_page']))
                    {
