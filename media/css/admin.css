@@ -117,3 +117,13 @@ text-decoration: none;
     text-align:center;
     background: red;
 }
+.fotoadmin
+{
+    position: top;
+    margin: 8px;
+    float: left;
+    display: block;
+}
+#numberimg{
+    display: none;
+}

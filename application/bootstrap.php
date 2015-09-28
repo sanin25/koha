@@ -146,6 +146,12 @@ Kohana::modules(array(
  * defaults for the URI.
  */
 
+ Route::set('ajax','ajax(/<action>(/<id>))')
+	->defaults(array(
+		'controller' => 'ajax',
+		//'action'     => 'index',
+                
+	));
  Route::set('auth', '<action>', array('action' => 'login|logout|register'))  
         ->defaults(array(
             'directory' => 'index',

@@ -31,7 +31,7 @@ class Controller_Admin_Pages extends Controller_Admin
             }
          //Работа с изоброжением 
          if (!empty($_FILES['images']['name'][0]))
-                foreach ($_FILES["images"]["error"] as $key => $error) 
+         {   foreach ($_FILES["images"]["error"] as $key => $error) 
                              {
                                      if(is_uploaded_file($_FILES['images']['tmp_name'][$key] ))
                                 {
@@ -50,6 +50,7 @@ class Controller_Admin_Pages extends Controller_Admin
                                 }
                                 }
                             }
+                        }
                            }
                 
                            if(isset($_POST['add_stop']))
@@ -79,18 +80,41 @@ class Controller_Admin_Pages extends Controller_Admin
                    if(isset($_POST['edit_page']))
                    {
                         $value = Arr::extract($_POST, array('title','descr','href','category_id','act'));
+                        try{
                         $data->values($value)
                         ->save();
-                        
-                       HTTP::redirect('admin/pages' );
-                           
-                   }
-            if( isset($_POST['edit_stop']))
+                        }  catch (ORM_Validation_Exception $e) {
+                            echo $e->errors('validation');
+                         }
+                //Работа над изображениями 
+                if (!empty($_FILES['images']['name'][0])) {
+            foreach ($_FILES["images"]["error"] as $key => $error) {
+                if (is_uploaded_file($_FILES['images']['tmp_name'][$key])) {
+                    if ($error == UPLOAD_ERR_OK) {
+                        $tmp_name = $_FILES["images"]["tmp_name"][$key];
+                        $name = $_FILES["images"]["name"][$key];
+                        $type = $_FILES["images"]["type"][$key];
+                        $filename = $this->_upload_img($tmp_name, $name, $type);
+                        // Запись в БД
+                        $im_db = ORM::factory('image');
+                        $im_db->page_id = $db['id'];
+                        $im_db->name = $filename;
+                        $im_db->save();
+                    }
+                }
+            }
+        }
+            
+        HTTP::redirect('admin/pages' );
+                    }
+             if( isset($_POST['edit_stop']))
                 {
                 HTTP::redirect('admin/pages');
                 }
-                
-                
+    }
+    public function dellimg()
+            {
+                echo  $id = (int) $this->request->param('id');;
             }
     public function _upload_img($file,$filename,$type = NULL, $directory = NULL){
 

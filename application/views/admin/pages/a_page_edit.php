@@ -16,7 +16,8 @@
                 <?= Form::select('category_id[]', $cats, $db['category_id'], array('multiple' => 'multiple', 'size' => 5)) ?>
             </td>
         </tr>
-        <tr><td>
+        <tr>
+            <td>
                 <?= Form::label('images', 'Загрузить изображения') ?>: <br/><br/>
                 <?= Form::file('images[]', array('id' => 'multi')) ?>
             </td>
@@ -25,26 +26,27 @@
                 <?= Form::checkbox('act', 1, (bool) $db['act']) ?> 
 
             </td>
-            <td>
-        </tr>
+         </tr>
         <tr>
             <td>
                 <hr>
-                        <?if (count($im = $data->images->find_all()) <= 0):?>
+                <?if (count($im = $data->images->find_all()) <= 0):?>
 
-                        <h3 style="padding:20; text-align: center ">Нет изображения</h3>
-                        <xd></xd>
-                        <?endif?>
-                         <?foreach($im as $img):?>
-
-
-                        <?= html::anchor('media/uploads/' . $img->name, html::image('media/uploads/small_' . $img->name, 
-                                array('width' => '150')),
-                                array('class' => 'fancybox-thumb', 'rel' => 'fancybox-thumb'))
-                        ?>
-
-                        <?endforeach?>
-            </td>
+                <h3 style="padding:20; text-align: center ">Нет изображения</h3>
+        <xd></xd>
+        <?endif?>
+        <?foreach($im as $img):?>
+        <div class="fotoadmin">
+          <?= HTML::image('media/img/delete.png',array('class'=>'dellimg','width'=>'20px'))?>
+            
+        <?=
+        html::anchor('media/uploads/' . $img->name, html::image('media/uploads/small_' . $img->name, array('width' => '150')), array('class' => 'fancybox-thumb', 'rel' => 'fancybox-thumb'))
+        ?>
+            <!--Новер картинки для аякса-->
+            <p id="numberimg"><?=$img->id?></p>
+       </div>
+        <?endforeach?>
+        </td>
         </tr>
         <tr>
             <td colspan="2">
